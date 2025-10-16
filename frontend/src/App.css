@@ -1,0 +1,56 @@
+/* App.css - glassmorphic theme */
+.container{ max-width:1100px; margin:40px auto; padding:24px; }
+.navbar{
+  display:flex; align-items:center; justify-content:space-between; padding:14px 24px;
+  position:sticky; top:0; backdrop-filter: blur(8px) saturate(120%);
+  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-bottom:1px solid rgba(255,255,255,0.03); z-index:40;
+}
+.brand{ display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit; }
+.logo{ width:44px;height:44px;border-radius:10px;
+  background: linear-gradient(135deg,#56a1ff,#78dcc8); display:flex;align-items:center;justify-content:center;
+  box-shadow: 0 6px 18px rgba(30,80,160,0.18); font-weight:700; font-size:18px;
+}
+.navlinks{ display:flex; gap:10px; align-items:center; }
+.navlinks a{ padding:8px 12px; border-radius:10px; text-decoration:none; color:var(--muted); font-weight:600; font-size:14px; }
+.navlinks a:hover{ color:#fff; background: rgba(255,255,255,0.02); }
+
+/* cards */
+.card{ padding:18px; border-radius:14px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.04); backdrop-filter: blur(6px);
+}
+
+/* hero */
+.hero{ display:grid; grid-template-columns:1fr 420px; gap:28px; align-items:center; margin-top:28px; }
+
+/* buttons */
+.btn{ padding:10px 14px; border-radius:10px; border:none; cursor:pointer;
+  background: linear-gradient(90deg,#56a1ff,#78dcc8); color:#022; font-weight:700;
+}
+
+/* chat launcher */
+.chat-launcher{ position:fixed; right:24px; bottom:24px; z-index:120; }
+.chat-bubble{ width:60px;height:60px;border-radius:50%; background:linear-gradient(135deg,#56a1ff,#78dcc8);
+  display:flex;align-items:center;justify-content:center; color:#022; font-weight:800; cursor:pointer;
+  box-shadow: 0 12px 30px rgba(10,40,90,0.4); border:4px solid rgba(255,255,255,0.06);
+}
+.chat-panel{ position:fixed; right:24px; bottom:100px; width:360px; max-width:92vw;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border-radius:14px; border:1px solid rgba(255,255,255,0.06); box-shadow: 0 20px 50px rgba(2,6,20,0.6);
+  backdrop-filter: blur(10px); overflow:hidden; z-index:130; display:flex; flex-direction:column;
+}
+.header{ display:flex; align-items:center; justify-content:space-between; padding:12px 14px; border-bottom:1px solid rgba(255,255,255,0.03);}
+.messages{ padding:12px; max-height:300px; overflow:auto; display:flex; flex-direction:column; gap:10px; }
+.msg{ max-width:78%; padding:10px 12px; border-radius:12px; }
+.msg.user{ align-self:flex-end; background: linear-gradient(90deg, rgba(86,161,255,0.16), rgba(120,220,200,0.06)); color:#dff6ff; }
+.msg.bot{ align-self:flex-start; background: rgba(255,255,255,0.03); color: #eaf6ff; }
+.chat-input{ display:flex; gap:8px; padding:10px; border-top:1px solid rgba(255,255,255,0.02);}
+.chat-input textarea{ flex:1; padding:10px; resize:none; border-radius:10px; background:transparent; border:1px solid rgba(255,255,255,0.04); color:inherit; height:44px; }
+.chat-input button{ padding:10px 12px; border-radius:10px; background:#56a1ff; border:none; color:#022; font-weight:700; cursor:pointer; }
+
+/* responsive */
+@media (max-width:900px){
+  .hero{ grid-template-columns:1fr; }
+  .chat-panel{ right:12px; left:12px; bottom:90px; width:auto; }
+}

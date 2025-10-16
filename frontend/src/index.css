@@ -1,0 +1,11 @@
+:root{
+  --bg:#071028;
+  --glass-border: rgba(255,255,255,0.06);
+  --accent: #56a1ff;
+  --accent2: #78dcc8;
+  --muted: rgba(255,255,255,0.75);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+html,body,#root{height:100%; margin:0; background: linear-gradient(180deg,#071028 0%, #0c1726 60%); color:#eaf6ff;}
+a{color:inherit; text-decoration:none;}
